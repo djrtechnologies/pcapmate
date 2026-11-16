@@ -1,10 +1,10 @@
 # pcapmate
 
-A tool to get ATSC 3.0 packet captures from an HDTV Mate.
+A tool to get ATSC 3.0 packet captures from a GTMedia HDTV Mate.
 
-One command-line program and one source tree for **macOS and Linux**, using libusb and Swift. Build the native executable for your operating system, then use the same commands on either platform. No HDHomeRun, Linux VM, Android app or media decoder is required for normal use.
+HDTV Mates can be found for $50-$60 on eBay. This program allows you to use a relatively inexpensive ATSC 3.0 USB dongle to acquire pcaps.
 
-**Validation status:** macOS build, replay/tests and physical Mate capture are verified. Linux portability changes and x86-64/ARM64 CI are included; local end-to-end Linux verification is **pending**, after a test-environment disk failure corrupted the downloaded Swift runtime. Do not treat the Linux hardware path as tested merely because it shares the driver. The GitHub Actions checks run on your first push. Details: [VALIDATION.md](docs/VALIDATION.md).
+This is a one command-line program and one source tree for Unix operating systems, using libusb and Swift. Build the native executable for your operating system, then use the same commands on either platform. No HDHomeRun, Linux VM, Android app or media decoder is required for normal use.
 
 ## Build
 
@@ -54,7 +54,7 @@ Output is a classic ALP `.pcap` and a `.pcap.json` report with record/byte count
 
 ## Replay and inspect
 
-Convert an existing **Sony ALP-div-TS USB stream**, not ordinary MPEG-TS:
+Convert an existing **Sony ALP-div-TS USB stream**:
 
 ```sh
 ./build/pcapmate --replay /path/raw-alp-div-ts.bin --output captures/replayed.pcap
@@ -89,6 +89,4 @@ F1 records (`08 00 05 f1 00 XX`) attribute the following ALP packet to `XX >> 2`
 
 `Sources/Hardware` contains the userspace driver; `Sources/Capture` the shared framer, PCAP writer, selection policy and CLI. `upstream/cxd28xx` holds the unmodified source subset needed by `Tools/regenerate.py`; `PROVENANCE.json` records hashes. `Tests` uses synthetic data. The Linux Dockerfile and macOS/Linux GitHub Actions workflow run without a receiver; they do not claim RF hardware testing.
 
-The public source package excludes the parent internal app, encoders/decoders, firmware, vendor APKs, captures and signing credentials. FreeStream and iPad DriverKit capture are separate work.
-
-Development assisted by [Codex](https://github.com/codex); the prepared initial commit includes a co-author trailer. [Acknowledgments](ACKNOWLEDGMENTS.md) retain the upstream driver credits.
+Development assisted by [Codex](https://github.com/codex).[Acknowledgments](ACKNOWLEDGMENTS.md) retain the upstream driver credits.
