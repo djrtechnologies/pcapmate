@@ -84,7 +84,6 @@ F1 records (`08 00 05 f1 00 XX`) attribute the following ALP packet to `XX >> 2`
 - [PLP IDs and automatic selection](docs/PLP_SELECTION.md)
 - [Linux setup](docs/LINUX.md)
 - [Validation evidence and limits](docs/VALIDATION.md)
-- [First GitHub upload, step by step](docs/GITHUB.md)
 
 `Sources/Hardware` contains the userspace driver; `Sources/Capture` the shared framer, PCAP writer, selection policy and CLI. `upstream/cxd28xx` holds the unmodified source subset needed by `Tools/regenerate.py`; `PROVENANCE.json` records hashes. `Tests` uses synthetic data. The Linux Dockerfile and macOS/Linux GitHub Actions workflow run without a receiver; they do not claim RF hardware testing.
 
