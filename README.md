@@ -4,8 +4,7 @@ A tool to get ATSC 3.0 packet captures from a GTMedia HDTV Mate.
 
 HDTV Mates can be found for $50-$60 on eBay. This program allows you to use a relatively inexpensive ATSC 3.0 USB dongle to acquire pcaps.
 
-This is a one command-line program and one source tree for Unix operating systems, using libusb and Swift. Build the native executable for your operating system, then use the same commands on either platform. No HDHomeRun, Linux VM, Android app or media decoder is required for normal use.
-
+This is a one command-line program and one source tree for Unix operating systems, using libusb and Swift. Build the native executable for your operating system, then use the same commands on either platform.
 ## Build
 
 Requires Swift **6.2+**, a Clang C compiler and libusb development files. The command is identical on both OSs:
