@@ -1,0 +1,16 @@
+build/
+*.pcap
+*.pcapng
+*.fw
+*.bin
+.DS_Store
+._*
+*.pcap.json
+*.pcapng.json
+*.apk
+*.o
+*.dylib
+*.so
+*.p12
+*.mobileprovision
+.env

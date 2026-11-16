@@ -1,0 +1,23 @@
+name: macOS and Linux
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew list libusb pkgconf || brew install libusb pkgconf
+      - run: ./build.sh
+      - run: ./test.sh
+      - run: ./Tools/smoke.sh
+  linux:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build --progress=plain -f Tools/Dockerfile.linux-test -t pcapmate-check .
+      - run: docker run --rm pcapmate-check

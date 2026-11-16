@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Create the hdtvmate group before installing this rule (see docs/LINUX.md).
+# Desktop logind grants active-seat access; the group supports headless hosts.
+SUBSYSTEM=="usb", ATTR{idVendor}=="23e2", ATTR{idProduct}=="2b02", GROUP="hdtvmate", MODE="0660", TAG+="uaccess"

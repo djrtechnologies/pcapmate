@@ -1,0 +1,6 @@
+FROM swift:6.2-noble
+RUN apt-get update && apt-get install -y --no-install-recommends libusb-1.0-0-dev pkg-config python3 && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace
+COPY . .
+RUN ./build.sh && ./test.sh && ./Tools/smoke.sh
+CMD ["build/pcapmate", "--help"]

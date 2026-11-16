@@ -1,0 +1,36 @@
+{
+  "upstream": "https://github.com/koreapyj/cxd28xx",
+  "revision": "c5fa27eecbe80633cbb365cc44656daea1c0e2e3",
+  "date": "2026-11-16",
+  "license": "GPL-2.0-only",
+  "files": {
+    "Sources/Capture/ALPPCAPFileWriter.swift": "d761dbc8b7b42ed40c9bf10416c1309f9f9b5a9786222486493c12645faa4c1b",
+    "Sources/Capture/HDTVMateALP.swift": "c34722f8d23fb173c75bd4e79fb55dad2ef960e5e2e0de9d993ef4669193fefd",
+    "Sources/Capture/HDTVMatePLPSelection.swift": "0d6e7eea4d4d2d7c5e9fe53a395b975b53e13fe4838af213182dbfd1ac09e565",
+    "Sources/Capture/main.swift": "19d17bf5bcb27518c3abf890a7a2fe63514378027564f4fcc3b6644bd3bbab08",
+    "Sources/Hardware/bridge.inc": "7ba9bd267da1040a66de38f534d8b7358495d255630a1d6931d6606ae31f7189",
+    "Sources/Hardware/compat.h": "97cfbc8d7e23f775ffda21ec20d07894100bcf66a298213e0c0d71bb057bb7ae",
+    "Sources/Hardware/cxd2878.h": "c2436ee11f43861a84ea54048b69adb409d71f23b68b4eadab681a4cef9463d1",
+    "Sources/Hardware/cxd2878_priv.h": "3418276f158fca420599a99d6eb1fe469f7b4037c82aaec692670f51a0cd5f97",
+    "Sources/Hardware/demod.inc": "71897dd5ac6ce5c1961dc9a1ee8a661bb3466f22247ada062587904bb2fefb78",
+    "Sources/Hardware/hdtvmate.c": "9095095815b4551fcf4f436e6ab46cd369faa30fe106d43ad603fd8cf1571a2e",
+    "Sources/Hardware/hdtvmate.h": "d1e44adbd7b50e00aecd887ef1603163cba1edbec748bc7cea8dcb7043abe4cf",
+    "Sources/Hardware/libusb.h": "a61260ab145b051b86df2b0575956f01810190abe2c7df6aca831c33bdc8082c",
+    "upstream/cxd28xx/LICENSE": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "upstream/cxd28xx/README.md": "456c8f23ecccdb9df8a1cd9f9d9f2bdbed3d49effd4c4d7a81347362103ab0eb",
+    "upstream/cxd28xx/cxd2878.c": "d1a3fab87a25588cf7f9c327fba185e7fd36ef2bcf1b415a1b9f5cf197975898",
+    "upstream/cxd28xx/cxd2878.h": "77d342437535123bfc895690672472c282c26d269442eeb6e112fd4c81272e15",
+    "upstream/cxd28xx/cxd2878_priv.h": "b7dae8fe8f9a567db9f2942888181849d6662acff8c31ed0d33661bc8dfdf671",
+    "upstream/cxd28xx/it930x.c": "572cf6f0d5c1be7ee1fd79b881c8a9d79177df3296a37dba0df3e91d9e9f530f"
+  },
+  "project": "pcapmate",
+  "about": "A tool to get ATSC 3.0 packet captures from an HDTV Mate.",
+  "targets": [
+    "macOS",
+    "Linux"
+  ],
+  "verification": {
+    "macOS": "Native build, capture tests, CLI replay/PLP16 smoke and earlier physical RF capture verified",
+    "Linux": "Native C compile verified; complete CLI verification pending after test-image corruption"
+  }
+}

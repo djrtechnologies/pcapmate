@@ -1,0 +1,9 @@
+build
+.git
+**/._*
+.DS_Store
+*.pcap
+*.pcap.json
+*.pcapng
+*.fw
+*.apk
